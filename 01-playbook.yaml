@@ -1,5 +1,5 @@
--name: ping the server
- hosts: local
- tasks:
- -name: ping the webserver
-  ansible.builtin.ping:
+- name: ping the server
+  hosts: local
+  tasks:
+  - name: ping the webserver
+    ansible.builtin.ping:
