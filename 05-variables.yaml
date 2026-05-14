@@ -1,0 +1,14 @@
+- name: playlevel & task level variables
+  hosts: local
+  connection: local
+  vars:
+   name: "rajureddy"
+   dob: 26 April-2026
+   Address: Karimnagar
+
+   tasks:
+    - name: this is one of task in my playbook
+      vars:
+       Address: warangal
+      ansible.builtin.debug: 
+       msg: "{{name }} born on {{dob}} in {{Address}}"  
