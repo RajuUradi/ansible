@@ -1,0 +1,13 @@
+- name: play level variables in ansible
+  hosts: local
+  connection: local
+  vars: 
+   course: "devops"
+   student: "raju"
+   trainer: "siva"
+   platform: "joindevops"
+
+  tasks:
+  - name: print all vars 
+    ansible.builtin.debug:
+     msg: "{{name }} learning {{course}} course in {{platform}} website "
