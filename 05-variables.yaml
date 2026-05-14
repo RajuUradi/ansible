@@ -2,13 +2,13 @@
   hosts: local
   connection: local
   vars:
-   name: "rajureddy"
+   Name: "rajureddy"
    dob: 26 April-2026
    Address: Karimnagar
 
-   tasks:
+  tasks:
     - name: this is one of task in my playbook
       vars:
        Address: warangal
       ansible.builtin.debug: 
-       msg: "{{name }} born on {{dob}} in {{Address}}"  
+       msg: "{{Name }} born on {{dob}} in {{Address}}"  
