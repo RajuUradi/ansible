@@ -10,4 +10,4 @@
   tasks:
   - name: print all vars 
     ansible.builtin.debug:
-     msg: "{{name }} learning {{course}} course in {{platform}} website "
+     msg: "{{student}} learning {{course}} in {{platform}} website "
