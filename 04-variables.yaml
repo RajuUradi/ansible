@@ -1,7 +1,7 @@
 - name: play level variables in ansible
   hosts: local
   connection: local
-  vars: 
+  vars:  # play level variables
    course: "devops"
    student: "raju"
    trainer: "siva"
@@ -11,3 +11,10 @@
   - name: print all vars 
     ansible.builtin.debug:
      msg: "{{student}} learning {{course}} in {{platform}} website "
+
+  tasks:
+  - name : 2nd task
+    ansible.builtin.debug:
+     msg: "{{student}} learning {{course}} in {{platform}} website"
+
+# Playlevel variables can be used in any task in this playbook        

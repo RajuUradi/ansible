@@ -1,16 +1,19 @@
 - name: playlevel & task level variables
   hosts: local
   connection: local
-  vars:
+  vars:   # play level variables
    Name: "rajureddy"
    dob: 26 April-2026
    Address: Karimnagar
 
   tasks:
     - name: this is one of task in my playbook
-      vars:
+      vars:  # Task level variables
        Address: warangal
       ansible.builtin.debug: 
        msg: "{{Name }} born on {{dob}} in {{Address}}"  
 
-       
+# Here iam declaring varaibles in Task level & Play level
+# Task level varaibles overrides the play level varaibles  
+# playlevel variables can be used at any task in this playbookm until they are overridden by task level variables
+    

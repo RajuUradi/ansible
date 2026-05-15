@@ -9,3 +9,8 @@
       Skillset: Java 
      ansible.builtin.debug: 
       msg: " {{Name}} born in {{Birthplace}} having Skill in {{Skillset}} "
+
+
+
+#  Here iam accessing variables from external yaml file (myvariables.yaml) 
+#  Task level variables overrides the yaml file variables 
