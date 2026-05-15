@@ -1,8 +1,8 @@
 - name: accessing variables from other yaml file
   hosts: local
   connection: local
-  vars_file:
-   -myvariables.yaml
+  vars_files:
+  - myvariables.yaml
   tasks:
    - name: printing those variables
      ansible.builtin.debug: 
