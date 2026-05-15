@@ -4,6 +4,6 @@
   vars-file:
    -myvariables.yaml
   tasks:
-  - name: printing those variables
+   - name: printing those variables
   ansible.builtin.debug: 
    msg: " {{name}} born in {{Birthplace}} having Skill in {{Skillset}} "
