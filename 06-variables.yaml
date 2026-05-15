@@ -1,9 +1,9 @@
--name: accessing variables from other yaml file
-hosts: local
-connection: local
-vars-file:
- -myvariables.yaml
-tasks:
- - name: printing those variables
-ansible.builtin.debug: 
- msg: " {{name}} born in {{Birthplace}} having Skill in {{Skillset}} "
+- name: accessing variables from other yaml file
+  hosts: local
+  connection: local
+  vars-file:
+   -myvariables.yaml
+  tasks:
+  - name: printing those variables
+  ansible.builtin.debug: 
+   msg: " {{name}} born in {{Birthplace}} having Skill in {{Skillset}} "
