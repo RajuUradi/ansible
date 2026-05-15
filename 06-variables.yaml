@@ -6,4 +6,4 @@
   tasks:
    - name: printing those variables
      ansible.builtin.debug: 
-      msg: " {{name}} born in {{Birthplace}} having Skill in {{Skillset}} "
+      msg: " {{Name}} born in {{Birthplace}} having Skill in {{Skillset}} "
