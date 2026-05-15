@@ -12,3 +12,5 @@
        Address: warangal
       ansible.builtin.debug: 
        msg: "{{Name }} born on {{dob}} in {{Address}}"  
+
+       
