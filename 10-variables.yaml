@@ -1,0 +1,24 @@
+- name: All variables
+  hosts: local
+  connection: local
+  vars:
+   Name: Raju_playlevel
+   Course: Devops
+   Address: Hyderabad
+  vars_files:
+  - myvariables.yaml
+  vars_prompt:
+   name: username
+   prompt: enter username
+   private: false
+
+   tasks:
+   - name: Task level vars
+     vars:
+      Name: Raju_from_Tasklevel
+     ansible.builtin.debug:
+      msg: "{{Name}}"
+
+
+#Playlevel , tasklevel ,Var_file , inventory file , prompt ,argument
+    

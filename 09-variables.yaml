@@ -6,3 +6,8 @@
   - name: print argument variables
     ansible.builtin.debug: 
      msg: "{{Name}} is a good human being "
+
+  #  $ ansible-playbook -i inventory.ini -e Name=Raju 09-variables.yaml
+
+  
+   
