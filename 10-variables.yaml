@@ -8,11 +8,11 @@
   vars_files:
   - myvariables.yaml
   vars_prompt:
-   name: username
-   prompt: enter username
-   private: false
+   - name: username
+     prompt: enter username
+     private: false
 
-   tasks:
+  tasks:
    - name: Task level vars
      vars:
       Name: Raju_from_Tasklevel
