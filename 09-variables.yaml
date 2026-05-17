@@ -3,6 +3,6 @@
   connection: local
 
   tasks: 
-  - name: prtint argument variables
+  - name: print argument variables
     ansible.builtin.debug: 
-     - msg: "{{Name}} is a good human being "
+     msg: "{{Name}} is a good human being "
