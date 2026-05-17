@@ -6,3 +6,5 @@
   - name: print variables in inventory file
     ansible.builtin.debug:
      msg: "iam learing {{course}} in depth"
+
+     

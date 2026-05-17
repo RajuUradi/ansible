@@ -1,0 +1,8 @@
+- name: passing variables as arguments
+  hosts: local
+  connection: local
+
+  tasks: 
+  - name: prtint argument variables
+  ansible.builtin.debug: 
+  - msg: "{{Name}} is a good human being "
