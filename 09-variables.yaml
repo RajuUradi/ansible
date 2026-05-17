@@ -4,5 +4,5 @@
 
   tasks: 
   - name: prtint argument variables
-  ansible.builtin.debug: 
-  - msg: "{{Name}} is a good human being "
+    ansible.builtin.debug: 
+     - msg: "{{Name}} is a good human being "
