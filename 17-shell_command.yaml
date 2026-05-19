@@ -4,7 +4,7 @@
 
   tasks:
   - name: shell module
-    ansible.builtin.shell: echo $HOME 
+   # ansible.builtin.shell: echo $HOME 
     ansible.builtin.shell: echo $USER 
     register: output
 
