@@ -6,7 +6,8 @@
   - name: shell module
     #ansible.builtin.shell: echo $HOME 
     #ansible.builtin.shell: echo $USER 
-    ansible.builtin.shell: echo $PATH 
+    #ansible.builtin.shell: echo $PATH 
+    ansible.builtin.shell: echo $PWD 
     register: output
 
   - name: print
