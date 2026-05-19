@@ -10,4 +10,4 @@
    - name: check given number is a greater 5 or not
      ansible.builtin.debug:
       msg: yes given {{number}} is greater than 5
-     when: number > 5   
+     when: number |int > 5   
