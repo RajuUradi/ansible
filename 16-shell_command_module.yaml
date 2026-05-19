@@ -4,8 +4,8 @@
 
   tasks:
   - name: find root keywpord in a file
+    #ansible.builtin.command: cat /etc/passwd | grep root 
     ansible.builtin.shell: cat /etc/passwd | grep root
     register: output
-  - name: print 
     ansible.builtin.debug:
      msg: "{{output.stdout}}"
