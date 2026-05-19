@@ -1,0 +1,27 @@
+- name: datatypes in ansible
+  hosts: local
+  connection: local
+  vars:
+   Program: "Devsecops with aws"
+   duration: 140
+   is_live: true
+
+   details:
+    months: 4
+    programtype: "online"
+
+    topics:
+     -linux
+     -shell
+     -ansible
+
+  tasks:
+   - name: print variables
+     ansible.builtin.debug:
+      msg: |
+       program: {{program}}
+       duration: {{duration}}
+       is_live: {{is_live}}
+       details: {{details}}
+       topics: {{topics}}   
+
