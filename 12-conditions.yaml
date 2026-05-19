@@ -1,0 +1,11 @@
+- name: conditions in yaml
+  hosts: local
+  connection: local
+  vars:
+   IPL: TataIPL
+   is_live: true
+  tasks:
+   - name: conditions in ansible
+     ansible.builtin.debug:
+      msg: tata ipl is live broadcasting
+     when: is_live 

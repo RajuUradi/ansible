@@ -2,23 +2,28 @@
   hosts: local
   connection: local
   vars:
-   Program: "Devsecops with aws"
-   duration: 140
-   is_live: true
-   DETAILS:
+   Program: "Devsecops with aws" # string 
+   duration: 140  # int 
+   is_live: true  # bool
+   DETAILS:       # map/dictionary {}
     months: 4
     programtype: "online"
-   TOPICS:
+   TOPICS:        # list 
     -linux
     -shell
     -ansible
   tasks:
    - name: print variables
      ansible.builtin.debug:
-      msg: |
+      msg: | 
        program: {{Program}}
        duration: {{duration}}
        is_live: {{is_live}}
        details: {{DETAILS}}
        topics: {{TOPICS}}   
+
+# " | " Pipe symbol is used to print multiple lines 
+
+
+
 
