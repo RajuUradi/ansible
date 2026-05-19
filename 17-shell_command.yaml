@@ -4,10 +4,11 @@
 
   tasks:
   - name: shell module
-   # ansible.builtin.shell: echo $HOME 
-    ansible.builtin.shell: echo $USER 
+    #ansible.builtin.shell: echo $HOME 
+    #ansible.builtin.shell: echo $USER 
+    ansible.builtin.shell: echo $PATH 
     register: output
 
   - name: print
     ansible.builtin.debug: 
-     msg: "{{output}}  "
+     msg: "{{output.stdout}}  "
