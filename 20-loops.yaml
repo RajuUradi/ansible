@@ -1,0 +1,14 @@
+- name: install & uninstall packages using loops
+  hosts: local
+  connection: local
+
+  tasks: 
+  - name: install neccessary and uninstall unneccessary packages using loops
+    ansible.builtin.package:
+     name: "{{item.name}}"
+     state: item.state
+
+    loop: #list of map
+    - {name: "nginx" , state: "absent"}  # map
+    - {name: "zip",state: "absent" }     # map
+    - { name: "mysql" , state: "absent"} # map
