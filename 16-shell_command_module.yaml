@@ -1,0 +1,11 @@
+- name: shell vs command module in ansible
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: find root keywpord in a file
+    ansible.builtin.command: cat /etc/passwd | grep root
+    register: output
+  - name: print 
+    ansible.builtin.debug:
+     msg: "{{print}}"
