@@ -1,0 +1,9 @@
+- name: check OS type of my instance
+  hosts: local
+  connection: local
+
+  tasks: 
+  - name : check my OS type 
+    ansible.builtin.debug:
+     msg: my OS version is RedHat 
+    when : ansible_facts.os_family == "RedHat"
