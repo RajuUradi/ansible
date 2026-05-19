@@ -4,5 +4,9 @@
 
   tasks:
   - name: shell module
-    ansible.builtin.shell:
-     msg: " echo $HOME " 
+    ansible.builtin.shell: echo $HOME 
+    register: output
+
+  - name: print
+    ansible.builtin.debug: 
+     msg: "{{output.stdout}}  "
