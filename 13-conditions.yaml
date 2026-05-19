@@ -1,0 +1,13 @@
+- name : check a number is greater than 5 or not
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: number
+    prompt: enter a number
+    private: false
+
+  tasks:
+   - name: check given number is a greater 5 or not
+     ansible.builtin.debug:
+      msg: yes given {{number}} is greater than 5
+     when: number > 5   
