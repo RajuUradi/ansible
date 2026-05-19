@@ -1,7 +1,7 @@
 - name: install & uninstall packages using loops
   hosts: local
   connection: local
-
+  become: yes
   tasks: 
   - name: install neccessary and uninstall unneccessary packages using loops
     ansible.builtin.package:
