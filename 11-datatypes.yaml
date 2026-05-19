@@ -5,16 +5,13 @@
    Program: "Devsecops with aws"
    duration: 140
    is_live: true
-
-   details:
+   DETAILS:
     months: 4
     programtype: "online"
-
-    topics:
-     -linux
-     -shell
-     -ansible
-
+   TOPICS:
+    -linux
+    -shell
+    -ansible
   tasks:
    - name: print variables
      ansible.builtin.debug:
@@ -22,6 +19,6 @@
        program: {{Program}}
        duration: {{duration}}
        is_live: {{is_live}}
-       details: {{details}}
-       topics: {{topics}}   
+       details: {{DETAILS}}
+       topics: {{TOPICS}}   
 
