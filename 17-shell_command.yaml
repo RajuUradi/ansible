@@ -1,0 +1,8 @@
+- name: shell module
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: shell module
+    ansible.builtin.shell:
+     msg: " echo $HOME " 
