@@ -33,7 +33,7 @@
 
    - name: read yamlfile 
      ansible.builtin.set_fact:
-      employee_data: " {{lookup('file',Employeedata.yaml) | from_yaml}}"
+      employee_data: " {{ lookup('file', 'Employeedata.yaml') | from_yaml}}"
 
    - name: convert to json
      ansible.builtin.debug:
