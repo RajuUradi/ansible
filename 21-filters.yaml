@@ -4,4 +4,4 @@
   tasks:
    - name: print a prime number
      ansible.builtin.debug:
-      msg: "Prime Number {{NUMBER | default(2)}}"
+      msg: "Prime Number is {{NUMBER | default(2)}}"
