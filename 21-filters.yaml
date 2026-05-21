@@ -1,0 +1,7 @@
+- name: filters in ansible
+  hosts: local
+  connection: local
+  tasks:
+   - name: print a prime number
+     ansible.builtin.debug:
+      msg: "Prime Number {{NUMBER | default(2)}}"
