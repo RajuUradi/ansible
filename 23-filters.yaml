@@ -1,12 +1,24 @@
 - name: converting dictionary into list using filters
   hosts: local
   connection: local
+  
   vars:
-   details: # dictonary
+   tagsmap: # dictonary/map/Hash
     Name: ansible
     Project: Roboshop
     Component: Catalogue
+
+   tagslist: [  # list of maps
+    {'key': 'Name', 'value': 'ansible'},
+     {'key': 'Project', 'value': 'Roboshop'},
+      {'key': 'Component', 'value': 'Catalogue'}
+    ]
+ 
   tasks:
    - name: convert dictionary to list
      ansible.builtin.debug:
-      msg: " List of {{ details | dict2items }}"   
+      msg: " List of {{ tagsmap | dict2items }}"   
+  tasks:
+   - name: convert list to dict 
+     ansible.builtin.debug:
+      msg: " {{ tagslist | items2dict}}"    
