@@ -1,0 +1,12 @@
+- name: converting dictionary into list using filters
+  hosts: local
+  connection: local
+  vars:
+   details: # dictonary
+    Name: ansible
+    Project: Roboshop
+    Component: Catalogue
+  tasks:
+   - name: convert dictionary to list
+     ansible.builtin.debug:
+      msg: " List of {{ details | dict2items }}"   
