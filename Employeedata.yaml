@@ -1,0 +1,8 @@
+- name: Employee data
+  hosts: local
+  connection: local
+
+  vars:
+   Employee1:
+    Name: Raju Uradi
+    Skill: DevSecOps with AWS
