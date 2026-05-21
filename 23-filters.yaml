@@ -21,4 +21,9 @@
   
    - name: convert list to dict 
      ansible.builtin.debug:
-      msg: " {{ tagslist | items2dict}}"    
+      msg: " {{ tagslist | items2dict}}"  
+
+   - name: convert to upper case
+     ansible.builtin.debug:
+      msg: " course | upper "
+   
