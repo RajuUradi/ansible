@@ -1,6 +1,5 @@
 - name: error_handling in ansible
   hosts: all
-  connection: local
   become: yes
 
   tasks:
