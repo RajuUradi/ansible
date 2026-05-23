@@ -14,4 +14,4 @@
 
    - name: create user if not existed
      ansible.builtin.command: useradd roboshop
-     when: user_ouput.rc != 0
+     when: user_output.rc != 0
