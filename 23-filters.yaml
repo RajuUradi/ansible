@@ -42,5 +42,5 @@
 
    - name: check given IP is IPV4 or not
      ansible.builtin.debug:
-      msg: "{{ myIp | ansible.utils.ipv4 }}"
+      msg: "{{ myIp | default('0.0.0.0') | ansible.utils.ipv4 }}"
    
