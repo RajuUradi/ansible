@@ -7,6 +7,7 @@
     Name: ansible
     Project: Roboshop
     Component: Catalogue
+    myIp: 255.233.34.10
 
    tagslist: [  # list of maps
     {'key': 'Name', 'value': 'ansible'},
