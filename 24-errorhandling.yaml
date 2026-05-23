@@ -1,0 +1,12 @@
+- name: error handling in ansible
+  hosts: all
+  connection: local
+
+  tasks:
+   - name: check user exist or not 
+     ansible.builtin.command: id Roboshop 
+     register: user_output
+
+   - name: print output of above tasks
+     ansible.builtin.debug:
+      msg: "{{user_output}}"  
