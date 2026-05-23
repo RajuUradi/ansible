@@ -32,10 +32,14 @@
       msg: "{{Name | lower }}"
 
    - name: read yamlfile 
-     ansible.builtin.set_fact:
+     ansible.builtin.set_fact: # setting up variable "  employee_data " & storing the yaml file in it ,in future i can use this variable
       employee_data: " {{ lookup('file', 'Employeedata.yaml') | from_yaml}}"
 
    - name: convert to json
      ansible.builtin.debug:
       msg: "{{employee_data|to_json}}"
+
+   - name: check given IP is IPV4 or not
+     ansible.builtin.debug:
+      msg: "{{ myIp | ansible.utils.ipv4 }}"
    
