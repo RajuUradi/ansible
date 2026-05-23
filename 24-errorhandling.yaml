@@ -1,4 +1,4 @@
-- name: error handling in ansible
+- name: error_handling in ansible
   hosts: all
   connection: local
 
@@ -11,3 +11,7 @@
    - name: print output of above tasks
      ansible.builtin.debug:
       msg: "{{user_output}}"  
+
+   - name: create user if not existed
+     ansible.builtin.command: useradd roboshop
+     when: user_ouput.rc != 0
